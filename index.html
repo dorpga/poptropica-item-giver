@@ -22,7 +22,18 @@
 </div>
 <script>
 function doit() {
-alert("submit");
+  var username = $("#username").val();
+  var password = md5($("#password").val());
+  var itemid = $("#itemid").val();
+  var dbid = 5;
+  $.post("https://www.poptropica.com/redeem_credits.php", {
+    username: username,
+    password_hash: password,
+    itemid: itemid,
+    dbid: dbid
+  }, function (d) {
+    alert(d);
+  });
 }
 </script>
 </body>
