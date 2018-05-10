@@ -43,7 +43,10 @@ function doit() {
 }
   
 $("#itemid").on("change", function() {
-  $("#flash").flash("https://static.poptropica.com/items/item"+$("#itemid").val()+".swf");
+  $("#flash").flash("https://static.poptropica.com/items/item"+$("#itemid").val()+".swf", {
+    height: 500,
+    width: 500
+  });
 });
 </script>
 </body>
