@@ -22,7 +22,7 @@
 <label for="password">Password</label><input type="password" id="password"><br>
 <label for="itemid">Item ID</label><input type="number" id="itemid"><br>
 <button onclick="doit()" id="submit">Submit</button><br>
-  <div id="flash"></div>
+<div id="flash">Enable <em>Flash Player</em> to see an item preview.</div>
 <p id="status"></p>
 </div>
 <script>
@@ -43,7 +43,8 @@ function doit() {
 }
   
 $("#itemid").on("change", function() {
-  $("#flash").flash("https://static.poptropica.com/items/item"+$("#itemid").val()+".swf", {
+  $("#flash").flash({
+    swf: "https://static.poptropica.com/items/item"+$("#itemid").val()+".swf",
     height: 500,
     width: 500
   });
