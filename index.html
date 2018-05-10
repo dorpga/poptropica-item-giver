@@ -26,7 +26,8 @@ function doit() {
   var password = md5($("#password").val());
   var itemid = $("#itemid").val();
   var dbid = 5;
-  $.post("https://www.poptropica.com/redeem_credits.php", {
+  // HACK: CORS is not enabled so we have to use cors.io
+  $.post("https://cors.io/?u=https://www.poptropica.com/redeem_credits.php", {
     username: username,
     password_hash: password,
     itemid: itemid,
