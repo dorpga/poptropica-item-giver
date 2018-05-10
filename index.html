@@ -32,7 +32,7 @@ function doit() {
     item_id: itemid,
     dbid: dbid
   }, function (d) {
-    if (d[6] == 't') {
+    if (d[7] == 't') {
       $("#status").text("Success");
     } else {
       $("#status").text("Failure: "+d);
