@@ -27,9 +27,9 @@ function doit() {
   var dbid = 5;
   // HACK: CORS is not enabled so we have to use a proxy
   $.post("https://cors-anywhere.herokuapp.com/https://www.poptropica.com/redeem_credits.php", {
-    username: username,
+    login: username,
     password_hash: password,
-    itemid: itemid,
+    item_id: itemid,
     dbid: dbid
   }, function (d) {
     if (d[6] == 't') {
